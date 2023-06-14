@@ -1,0 +1,81 @@
+body {
+    background-color: #646668;
+    color: #dddee0;
+    font-family: "Avenir", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("./GroteMooieGolfBlurry.png");
+    background-size: cover;
+    background-position: 0px -125px; /* Adjust the pixel values as per your desired position */
+    background-repeat: no-repeat;
+  }
+  
+  h1 {
+    position: relative; /* Create a new stacking context */
+    z-index: 1; /* Ensure the title is above the overlay */
+    mix-blend-mode: difference; /* Apply color inversion using the difference blend mode */
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Set an overlay color with some transparency */
+    pointer-events: none; /* Ensure the overlay doesn't interfere with interaction */
+    z-index: -1; /* Send the overlay to the bottom of the stacking order */
+    align-items: center;
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .t_1 {
+    font-size: 78px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  .p_1 {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: goldenrod;
+    margin: 5px;
+    flex-basis: 500px;
+    text-align: center;
+  }
+  
